@@ -24,7 +24,8 @@ populateInput();
 function onFormSubmit(event) {
     event.preventDefault();
     event.currentTarget.reset();
-    console.log(formData);
+    // console.log(localStorage.getItem(STORAGE_KEY));
+    console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
     localStorage.removeItem(STORAGE_KEY);
 }
 
@@ -37,4 +38,3 @@ function populateInput() {
         message.value = savedText.message || '';
     }
 }
-
